@@ -35,6 +35,8 @@ Route::prefix('v1')->group(function () {
                 Route::apiResource('/spots', App\Http\Controllers\Api\Admin\SpotController::class);
                 Route::apiResource('/users', App\Http\Controllers\Api\Admin\UserController::class);
                 Route::apiResource('/roles', App\Http\Controllers\Api\Admin\StatusController::class);
+                Route::apiResource('/showconsultations', App\Http\Controllers\Api\Admin\ShowConsultationController::class);
+                Route::apiResource('/editconsultations', App\Http\Controllers\Api\Admin\EditConsulController::class);
         });
     }
     );

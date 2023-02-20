@@ -8,7 +8,10 @@ class ConsultaitonResource extends JsonResource
 {
 
     public $message;
-    public function __construct($message){
+    public $status;
+    public function __construct($status, $message, $resource){
+        parent::__construct($resource);
+        $this->status = $status;
         $this->message = $message;
     }
     /**
@@ -20,7 +23,9 @@ class ConsultaitonResource extends JsonResource
     public function toArray($request)
     {
         return [
+            'status' => $this->status,
             'message' => $this->message,
+            'data' => $this->resource,
         ];
     }
 }

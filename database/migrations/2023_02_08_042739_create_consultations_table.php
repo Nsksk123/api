@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('consultations', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->string('status');
             $table->string('disease_history');
             $table->string('current_symptoms');

@@ -12,9 +12,10 @@ class Consultation extends Model
         'status',
         'disease_history',
         'current_symptoms',
-        'doctor_note',
+        'doctor_notes',
         'doctor',
-        'user_id'
+        'user_id',
+        'name',
     ];
 
     protected $hidden = [
@@ -23,7 +24,8 @@ class Consultation extends Model
     ];
 
 
+
     public function user(){
-        return $this->hasOne(User::class);
+        return $this->belongsTo(User::class);
     }
 }

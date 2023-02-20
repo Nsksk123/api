@@ -15,6 +15,7 @@ class ConsultationController extends Controller
     public function index(){
         $user = auth()->user();
         $consultations = DB::table('consultations')->where('user_id', $user->id_card)->get()->first();
+
             return response()->json([
                 'body' => $consultations,
 
@@ -28,6 +29,7 @@ class ConsultationController extends Controller
             'disease_history' => 'required',
             'current_symptoms' => 'required',
             'user_id' => '',
+            'name' => '',
         ]);
 
         if($validator->fails()){
@@ -40,6 +42,7 @@ class ConsultationController extends Controller
             'disease_history' => $request->disease_history,
             'current_symptoms' => $request->current_symptoms,
             'user_id' => $request->user_id,
+            'name' => $request->name,
         ]);
 
         if($consultation){
@@ -67,7 +70,6 @@ class ConsultationController extends Controller
         $validator = Validator::make($request->all(), [
             'status' => 'required',
             'doctor_notes' => 'required',
-            'doctor_id' => 'required'
         ]);
 
         if ($validator->fails()) {
@@ -78,8 +80,6 @@ class ConsultationController extends Controller
         $consultation->update([
             'status' => $request->status,
             'doctor_notes' => $request->doctor_notes,
-            'doctor_id' => $request->doctor_id,
-            'slug' => Str::slug($request->name, '-'),
         ]);
 
         if($consultation) {

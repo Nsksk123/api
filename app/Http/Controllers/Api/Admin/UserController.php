@@ -14,6 +14,7 @@ class UserController extends Controller
             return response()->json([
                 'id_card' => $user->id_card,
                 'status' => $user->status,
+                'name' => $user->name,
             ]);
 
     }
