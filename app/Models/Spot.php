@@ -17,7 +17,9 @@ class Spot extends Model
         'available_vaccines'
     ];
 
-    public function vaccines(){
-        return $this->hasMany(Vaccines::class);
-    }
+
+
+
+
+
 }

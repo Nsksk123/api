@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
+use App\Models\Region;
 
 class LoginController extends Controller
 {
@@ -30,7 +31,7 @@ class LoginController extends Controller
         }
 
         $user = User::where('id_card', $request->id_card)->first();
-
+        $region = Region::where('id',$request->id)->first();
         if(!$user || !Hash::check($request->password, $user->password)){
             return response()->json([
                 'message' => 'ID Card Number or Password incorrect',
@@ -38,6 +39,7 @@ class LoginController extends Controller
         }
         return response()->json([
             'body' => $user,
+            'regional' => $region,
             'token' => $user->createToken('authToken')->accessToken,
         ], 200);
     }

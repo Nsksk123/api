@@ -15,5 +15,16 @@ class Vaccines extends Model
         'Pfizer',
         'Sinnopharm',
     ];
+
+    protected $hidden = [
+        "id",
+            "spot_id",
+            "created_at",
+            "updated_at",
+    ];
+
+    public function vaccines(){
+        return $this->belongsTo(Vaccines::class);
+    }
 }
 

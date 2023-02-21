@@ -19,8 +19,10 @@ return new class extends Migration
             $table->string('address');
             $table->string('serve');
             $table->string('capacity');
-            $table->string('available_vaccines');
+            $table->unsignedBigInteger('region_id');
             $table->timestamps();
+
+            $table->foreign('region_id')->references('id')->on('regions');
         });
     }
 

@@ -17,10 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('province');
             $table->string('district');
-            $table->unsignedBigInteger('user_id');
-
-            $table->foreign('user_id')->references('id_card')->on('users');
-
         });
     }
 

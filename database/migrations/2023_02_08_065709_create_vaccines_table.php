@@ -15,11 +15,7 @@ return new class extends Migration
     {
         Schema::create('vaccines', function (Blueprint $table) {
             $table->id();
-            $table->boolean('Sinovac');
-            $table->boolean('Astrazenaca');
-            $table->boolean('Moderna');
-            $table->boolean('Pfizer');
-            $table->boolean('Sinnopharm');
+            $table->string('nama_vaksin');
             $table->unsignedBigInteger('spot_id');
             $table->timestamps();
 

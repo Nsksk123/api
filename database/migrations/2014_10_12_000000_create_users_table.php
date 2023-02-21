@@ -19,10 +19,12 @@ return new class extends Migration
             $table->string('born_date');
             $table->string('gender');
             $table->string('address');
-            $table->string('regional');
             $table->string('password');
             $table->integer('status');
+            $table->unsignedBigInteger('region_id');
             $table->rememberToken();
+
+            $table->foreign('region_id')->references('id')->on('regions');
         });
     }
 

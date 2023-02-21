@@ -18,18 +18,16 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'name'      => 'kotans',
-            'password'  => Hash::make('123456'),
-            'id_card' => '21098',
-            'born_date' => '17-05-06',
-            'gender' => 'male',
-            'address' => 'Wonosari',
-            'regional' => DB::table('regions')
-            ->where('id', 1)
-            ->get(),
-            'status' => 0
-        ]);
+        // DB::table('users')->insert([
+        //     'name'      => 'kotans',
+        //     'password'  => Hash::make('12'),
+        //     'id_card' => '21097',
+        //     'born_date' => '17-05-06',
+        //     'gender' => 'male',
+        //     'address' => 'Wonosari',
+        //     'status' => 0,
+        //     'region_id' => 1,
+        // ]);
 
         // DB::table('doctors')->insert([
         //     'id_card' => '11099',
@@ -42,7 +40,7 @@ class UserSeeder extends Seeder
         //     'address' => 'Jl. Gotong Royong',
         //     'serve' => '1|2|3',
         //     'capacity' => '15',
-        //     'available_vaccines' => Vaccines::all(),
+        //     'region_id' => 2,
         // ]);
 
         // DB::table('spot_details')->insert([
@@ -53,8 +51,7 @@ class UserSeeder extends Seeder
 
         // DB::table('regions')->insert([
         //     'province' => 'Jawa Tengah',
-        //     'district' => 'Boyolali',
-        //     'user_id' => 1,
+        //     'district' => 'Tengaran',
         // ]);
 
         // DB::table('vaccines')->insert([
@@ -71,5 +68,10 @@ class UserSeeder extends Seeder
 
         //      'available_vaccines' => Spot::all(),
         //  ]);
+
+         DB::table('vaccines')->insert([
+            'nama_vaksin' => 'Sinnoparm',
+            'spot_id' => 2,
+         ]);
     }
 }
