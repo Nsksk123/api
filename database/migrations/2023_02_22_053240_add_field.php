@@ -13,10 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('regions', function (Blueprint $table) {
-            $table->id();
-            $table->string('province');
-            $table->string('district')->unique();
+        Schema::table('spots', function (Blueprint $table) {
+            //
+            $table->string('available_vaccine');
         });
     }
 
@@ -27,6 +26,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('regions');
+        Schema::table('spots', function (Blueprint $table) {
+            //
+        });
     }
 };

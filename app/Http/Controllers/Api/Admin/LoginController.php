@@ -31,7 +31,7 @@ class LoginController extends Controller
         }
 
         $user = User::where('id_card', $request->id_card)->first();
-        $region = Region::where('id',$request->id)->first();
+        $region = Region::where('district',$request->region)->first();
         if(!$user || !Hash::check($request->password, $user->password)){
             return response()->json([
                 'message' => 'ID Card Number or Password incorrect',

@@ -19,10 +19,10 @@ return new class extends Migration
             $table->string('address');
             $table->string('serve');
             $table->string('capacity');
-            $table->unsignedBigInteger('region_id');
+            $table->string('region');
             $table->timestamps();
 
-            $table->foreign('region_id')->references('id')->on('regions');
+            $table->foreign('region')->references('district')->on('regions');
         });
     }
 

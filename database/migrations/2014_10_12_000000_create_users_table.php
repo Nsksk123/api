@@ -21,10 +21,10 @@ return new class extends Migration
             $table->string('address');
             $table->string('password');
             $table->integer('status');
-            $table->unsignedBigInteger('region_id');
+            $table->string('region');
             $table->rememberToken();
 
-            $table->foreign('region_id')->references('id')->on('regions');
+            $table->foreign('region')->references('district')->on('regions');
         });
     }
 

@@ -17,7 +17,9 @@ class Spot extends Model
         'available_vaccines'
     ];
 
-
+    public function spot(){
+        return $this->belongsTo(User::class);
+    }
 
 
 

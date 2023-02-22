@@ -12,17 +12,14 @@ class SpotController extends Controller
 {
     //
     public function index(){
-        $spots = Spot::when(request()->q, function ($spots) {
-            $spots = $spots->where('neme', 'like', '%' . request()->q . '%');
+        $user = auth()->user();
+        $region = $user->region;
 
-        })->first();
-        $vaccines = Vaccines::with('vaccines')->when(request()->q, function($consultation){
-            $consultation = $consultation->where('spot_id', 'like', '%' . request()->q . '%');
-        })->latest()->paginate(10);
+        $spots = Spot::with('spot')->where('region', $user->region)->leftJoin('vaccines', 'spots.id', '=', 'vaccines.spot_id')->get();
         return response()->json([
             'status' => true,
             'body' => $spots,
-            'available_vaccination' => $vaccines,
+            // 'available_vaccination' => $vaccines,
         ], 200);
     }
 
