@@ -18,17 +18,17 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            [
-            'name'      => 'Ismed',
-            'password'  => Hash::make('1'),
-            'id_card' => '11099',
-            'born_date' => '17-05-06',
-            'gender' => 'male',
-            'address' => 'Wonosari',
-            'status' => 1,
-            'region' => "Tengaran"
-            ],
+        // DB::table('users')->insert([
+        //     [
+        //     'name'      => 'Ismed',
+        //     'password'  => Hash::make('1'),
+        //     'id_card' => '11099',
+        //     'born_date' => '17-05-06',
+        //     'gender' => 'male',
+        //     'address' => 'Wonosari',
+        //     'status' => 1,
+        //     'region' => "Tengaran"
+        //     ],
             // [
             // 'name'      => 'Natan',
             // 'password'  => Hash::make('1234'),
@@ -59,7 +59,7 @@ class UserSeeder extends Seeder
             // 'status' => 0,
             // 'region' => "Salatiga"
             // ],
-        ]);
+        // ]);
 
         // DB::table('spots')->insert([
         //     [
@@ -134,10 +134,10 @@ class UserSeeder extends Seeder
         //     ],
         // ]);
 
-        // DB::table('spot_details')->insert([
-        //     'vaccinations_count' => 12,
-        //     'spot_id' => 1.
-        // ]);
+        DB::table('spot_details')->insert([
+            'vaccinations_count' => 12,
+            'spot_id' => 1.
+        ]);
 
     //     DB::table('regions')->insert([
     //         [

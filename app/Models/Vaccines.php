@@ -23,8 +23,8 @@ class Vaccines extends Model
             "updated_at",
     ];
 
-    public function vaccines(){
-        return $this->belongsTo(Vaccines::class);
+    public function spot(){
+        return $this->hasMany(Spot::class);
     }
 }
 

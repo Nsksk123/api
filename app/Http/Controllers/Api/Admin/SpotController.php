@@ -14,11 +14,14 @@ class SpotController extends Controller
     public function index(){
         $user = auth()->user();
         $region = $user->region;
+        $spotId = Spot::where('region', $region)->pluck('id');
 
-        $spots = Spot::with('spot')->where('region', $user->region)->leftJoin('vaccines', 'spots.id', '=', 'vaccines.spot_id')->get();
+        $spots = Spot::where('region', $user->region)->get();
+        $vaccine = Vaccines::whereIn('spot_id', $spotId)->get();
         return response()->json([
             'status' => true,
             'body' => $spots,
+            'vaccine' => $vaccine,
             // 'available_vaccination' => $vaccines,
         ], 200);
     }
