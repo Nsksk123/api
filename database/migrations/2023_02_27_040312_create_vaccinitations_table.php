@@ -13,16 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('spots', function (Blueprint $table) {
+        Schema::create('vaccinitations', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('address');
-            $table->integer('serve');
-            $table->integer('capacity');
-            $table->string('region');
+            $table->string('status')->default('Vaccinated');
+            $table->string('Spot');
+            $table->string('Vaccine');
+            $table->string('vaccinitator')->default(null);
             $table->timestamps();
-
-            $table->foreign('region')->references('district')->on('regions');
         });
     }
 
@@ -33,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('spots');
+        Schema::dropIfExists('vaccinitations');
     }
 };

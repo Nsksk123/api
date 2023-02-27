@@ -16,12 +16,12 @@ return new class extends Migration
         Schema::create('consultations', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('status');
-            $table->string('disease_history');
-            $table->string('current_symptoms');
-            $table->string('doctor_notes');
-            $table->string('doctor');
-            $table->unsignedBigInteger('user_id');
+            $table->string('status')->default(null);
+            $table->string('disease_history')->default(null);
+            $table->string('current_symptoms')->default(null);
+            $table->string('doctor_notes')->default(null);
+            $table->string('doctor')->default(null);
+            $table->unsignedBigInteger('user_id')->default(null);
             $table->timestamps();
 
             $table->foreign('user_id')->references('id_card')->on('users');

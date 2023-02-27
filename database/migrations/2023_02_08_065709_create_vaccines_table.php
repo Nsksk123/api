@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('vaccines', function (Blueprint $table) {
             $table->id();
             $table->string('nama_vaksin');
+            $table->integer('stock');
             $table->unsignedBigInteger('spot_id');
             $table->timestamps();
 
