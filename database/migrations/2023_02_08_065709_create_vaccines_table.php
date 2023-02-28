@@ -17,10 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('nama_vaksin');
             $table->integer('stock');
-            $table->unsignedBigInteger('spot_id');
+            $table->string('spot');
             $table->timestamps();
 
-            $table->foreign('spot_id')->references('id')->on('spots');
+            $table->foreign('spot')->references('name')->on('spots');
         });
     }
 

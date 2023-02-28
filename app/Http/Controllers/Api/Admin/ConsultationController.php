@@ -80,6 +80,7 @@ class ConsultationController extends Controller
         $consultation->update([
             'status' => $request->status,
             'doctor_notes' => $request->doctor_notes,
+            'doctor' => $request->doctor,
         ]);
 
         if($consultation) {

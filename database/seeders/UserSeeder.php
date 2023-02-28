@@ -85,70 +85,35 @@ class UserSeeder extends Seeder
             [
             'name' => 'Joko Hospital',
             'address' => 'Jl. Gotong Royong',
-            'serve' => '1|2|3',
+            'serve' => 1,
             'capacity' => '15',
             'region' => "Salatiga",
             ],
             [
             'name' => 'Siti Hospital',
             'address' => 'Jl. Gotong Royong',
-            'serve' => '1|2|3',
+            'serve' => 1,
             'capacity' => '15',
             'region' => "Tengaran",
             ],
             [
             'name' => 'Yohanes Hospital',
             'address' => 'Jl. Gotong Royong',
-            'serve' => '1|2|3',
+            'serve' => 1,
             'capacity' => '15',
             'region' => "Tengaran",
             ],
             [
-            'name' => 'Rizky Hospital',
-            'address' => 'Jl. Gotong Royong',
-            'serve' => '1|2|3',
-            'capacity' => '15',
-            'region' => "Ungaran",
-            ],
-            [
             'name' => 'Ismed Hospital',
             'address' => 'Jl. Gotong Royong',
-            'serve' => '1|2|3',
-            'capacity' => '15',
-            'region' => "Ungaran",
-            ],
-            [
-            'name' => 'Alpin Hospital',
-            'address' => 'Jl. Gotong Royong',
-            'serve' => '1|2|3',
+            'serve' => 1,
             'capacity' => '15',
             'region' => "Ungaran",
             ],
             [
             'name' => 'natan Hospital',
             'address' => 'Jl. Gotong Royong',
-            'serve' => '1|2|3',
-            'capacity' => '15',
-            'region' => "Boyolali",
-            ],
-            [
-            'name' => 'ASD Hospital',
-            'address' => 'Jl. Gotong Royong',
-            'serve' => '1|2|3',
-            'capacity' => '15',
-            'region' => "Boyolali",
-            ],
-            [
-            'name' => 'Purnama Hospital',
-            'address' => 'Jl. Gotong Royong',
-            'serve' => '1|2|3',
-            'capacity' => '15',
-            'region' => "Boyolali",
-            ],
-            [
-            'name' => 'Purkidi Hospital',
-            'address' => 'Jl. Gotong Royong',
-            'serve' => '1|2|3',
+            'serve' => 1,
             'capacity' => '15',
             'region' => "Boyolali",
             ],
@@ -162,252 +127,127 @@ class UserSeeder extends Seeder
         DB::table('vaccines')->insert([
             [
                 'nama_vaksin' => "Sinovac",
-                'spot_id' => 10,
+                'spot' => 'natan Hospital',
                 'stock' => 0
             ],
             [
                 'nama_vaksin' => "Astraveneca",
-                'spot_id' => 10,
+                'spot' => 'natan Hospital',
                 'stock' => 15
             ],
             [
                 'nama_vaksin' => "Moderna",
-                'spot_id' => 10,
+                'spot' => 'natan Hospital',
                 'stock' => 15
             ],
             [
                 'nama_vaksin' => "Pfizer",
-                'spot_id' => 10,
+                'spot' => 'natan Hospital',
                 'stock' => 0
             ],
             [
                 'nama_vaksin' => "Sinnopharm",
-                'spot_id' => 10,
+                'spot' => 'natan Hospital',
                 'stock' => 150
             ],
             [
                 'nama_vaksin' => "Sinovac",
-                'spot_id' => 9,
+                'spot' => 'Ismed Hospital',
                 'stock' => 15
             ],
             [
                 'nama_vaksin' => "Astraveneca",
-                'spot_id' => 9,
+                'spot' => 'Ismed Hospital',
                 'stock' => 15
             ],
             [
                 'nama_vaksin' => "Moderna",
-                'spot_id' => 9,
+                'spot' => 'Ismed Hospital',
                 'stock' => 15
             ],
             [
                 'nama_vaksin' => "Pfizer",
-                'spot_id' => 9,
+                'spot' => 'Ismed Hospital',
                 'stock' => 15
             ],
             [
                 'nama_vaksin' => "Sinnopharm",
-                'spot_id' => 9,
+                'spot' => 'Ismed Hospital',
                 'stock' => 0
             ],
             [
                 'nama_vaksin' => "Sinovac",
-                'spot_id' => 8,
+                'spot' => 'Joko Hospital',
                 'stock' => 15
             ],
             [
                 'nama_vaksin' => "Astraveneca",
-                'spot_id' => 8,
+                'spot' => 'Joko Hospital',
                 'stock' => 15
             ],
             [
                 'nama_vaksin' => "Moderna",
-                'spot_id' => 8,
+                'spot' => 'Joko Hospital',
                 'stock' => 15
             ],
             [
                 'nama_vaksin' => "Pfizer",
-                'spot_id' => 8,
+                'spot' => 'Joko Hospital',
                 'stock' => 0
             ],
             [
                 'nama_vaksin' => "Sinnopharm",
-                'spot_id' => 8,
+                'spot' => 'Joko Hospital',
                 'stock' => 15
             ],
             [
                 'nama_vaksin' => "Sinovac",
-                'spot_id' => 7,
+                'spot' => 'Yohanes Hospital',
                 'stock' => 15
             ],
             [
                 'nama_vaksin' => "Astraveneca",
-                'spot_id' => 7,
+                'spot' => 'Yohanes Hospital',
                 'stock' => 0
             ],
             [
                 'nama_vaksin' => "Moderna",
-                'spot_id' => 7,
+                'spot' => 'Yohanes Hospital',
                 'stock' => 15
             ],
             [
                 'nama_vaksin' => "Pfizer",
-                'spot_id' => 7,
+                'spot' => 'Yohanes Hospital',
                 'stock' => 15
             ],
             [
                 'nama_vaksin' => "Sinnopharm",
-                'spot_id' => 7,
+                'spot' => 'Yohanes Hospital',
                 'stock' => 15
             ],
             [
                 'nama_vaksin' => "Sinovac",
-                'spot_id' => 6,
+                'spot' => 'Siti Hospital',
                 'stock' => 0
             ],
             [
                 'nama_vaksin' => "Astraveneca",
-                'spot_id' => 6,
+                'spot' => 'Siti Hospital',
                 'stock' => 15
             ],
             [
                 'nama_vaksin' => "Moderna",
-                'spot_id' => 6,
+                'spot' => 'Siti Hospital',
                 'stock' => 15
             ],
             [
                 'nama_vaksin' => "Pfizer",
-                'spot_id' => 6,
+                'spot' => 'Siti Hospital',
                 'stock' => 15
             ],
             [
                 'nama_vaksin' => "Sinnopharm",
-                'spot_id' => 6,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Sinovac",
-                'spot_id' => 5,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Astraveneca",
-                'spot_id' => 5,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Moderna",
-                'spot_id' => 5,
-                'stock' => 0
-            ],
-            [
-                'nama_vaksin' => "Pfizer",
-                'spot_id' => 5,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Sinnopharm",
-                'spot_id' => 5,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Sinovac",
-                'spot_id' => 4,
-                'stock' => 0
-            ],
-            [
-                'nama_vaksin' => "Astraveneca",
-                'spot_id' => 4,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Moderna",
-                'spot_id' => 4,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Pfizer",
-                'spot_id' => 4,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Sinnopharm",
-                'spot_id' => 4,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Sinovac",
-                'spot_id' => 3,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Astraveneca",
-                'spot_id' => 3,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Moderna",
-                'spot_id' => 3,
-                'stock' => 0
-            ],
-            [
-                'nama_vaksin' => "Pfizer",
-                'spot_id' => 3,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Sinnopharm",
-                'spot_id' => 3,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Sinovac",
-                'spot_id' => 2,
-                'stock' => 0
-            ],
-            [
-                'nama_vaksin' => "Astraveneca",
-                'spot_id' => 2,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Moderna",
-                'spot_id' => 2,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Pfizer",
-                'spot_id' => 2,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Sinnopharm",
-                'spot_id' => 2,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Sinovac",
-                'spot_id' => 1,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Astraveneca",
-                'spot_id' => 1,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Moderna",
-                'spot_id' => 1,
-                'stock' => 0
-            ],
-            [
-                'nama_vaksin' => "Pfizer",
-                'spot_id' => 1,
-                'stock' => 15
-            ],
-            [
-                'nama_vaksin' => "Sinnopharm",
-                'spot_id' => 1,
+                'spot' => 'Siti Hospital',
                 'stock' => 15
             ],
         ]);

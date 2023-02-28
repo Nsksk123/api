@@ -15,12 +15,12 @@ class SpotController extends Controller
     public function index(){
         $user = auth()->user();
         $region = $user->region;
-        $spotId = Spot::where('region', $region)->pluck('id');
+        $spotId = Spot::where('region', $region)->pluck('name');
 
-        $spots = Spot::select('*', \DB::raw('GROUP_CONCAT(vaccines.nama_vaksin SEPARATOR ",") as vaccines'))
-        ->leftJoin('vaccines', 'spots.id', '=', 'vaccines.spot_id')
-        ->groupBy('spots.id')->whereIn("spot_id", $spotId)->get();
-        $vaccine = Vaccines::whereIn('spot_id', $spotId)->get();
+        $spots = Spot::select('*', DB::raw('GROUP_CONCAT(vaccines.nama_vaksin SEPARATOR ",") as vaccines'))
+        ->leftJoin('vaccines', 'spots.name', '=', 'vaccines.spot')
+        ->groupBy('spots.name')->whereIn("spot", $spotId)->get();
+        $vaccine = Vaccines::whereIn('spot', $spotId)->get();
         return response()->json([
             'status' => true,
             'body' => $spots,

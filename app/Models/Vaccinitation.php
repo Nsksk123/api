@@ -10,6 +10,7 @@ class Vaccinitation extends Model
     use HasFactory;
 
     protected $fillable = [
+        'status',
         'Spot',
         'Vaccine',
         'vaccinator'
