@@ -25,7 +25,7 @@ class VaccinationController extends Controller
         $vaccination = Vaccinitation::create([
             'Spot' => $request->Spot,
             'Vaccine' => $request->Vaccine,
-            'vaccinitator' => $request->vaccinitator
+            'status' => 'Vaccinated'
         ]);
 
         if($vaccination){
