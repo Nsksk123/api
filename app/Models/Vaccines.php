@@ -25,5 +25,9 @@ class Vaccines extends Model
     public function spot(){
         return $this->hasMany(Spot::class);
     }
+
+    public function  decreamentAmount($amount){
+        $this->decrement('stock', $amount);
+    }
 }
 

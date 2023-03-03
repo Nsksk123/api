@@ -38,6 +38,7 @@ Route::prefix('v1')->group(function () {
                 Route::apiResource('/showconsultations', App\Http\Controllers\Api\Admin\ShowConsultationController::class);
                 Route::apiResource('/editconsultations', App\Http\Controllers\Api\Admin\EditConsulController::class);
                 Route::apiResource('/vaccinations', App\Http\Controllers\Api\Admin\VaccinationController::class);
+                Route::post('/spots', 'App\Http\Controllers\Api\Admin\SpotController@updateStock');
         });
     }
     );

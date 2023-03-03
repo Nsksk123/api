@@ -37,4 +37,13 @@ class SpotController extends Controller
             ]);
         }
     }
+
+    public function updateStock(Request $request){
+        $vaccineId = $request->input('vaccine_id');
+        $vaccine = Vaccines::where('id', $vaccineId)->decrement('stock', 1);
+
+        return response()->json([
+            'stock' => $vaccine
+        ]);
+    }
 }
